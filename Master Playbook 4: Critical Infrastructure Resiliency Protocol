@@ -1,0 +1,129 @@
+Master Playbook 4: Critical Infrastructure Resiliency Protocol
+[Focus: DORA Article 28 & Third-Party Risk]
+The Objective: To prove mastery over the Digital Operational Resilience Act (DORA), positioning you as a Resilience Architect for EU Financial/Critical sectors.
+
+Article 28 Audit Protocol:
+
+A technical checklist for auditing Critical ICT Third-Party Providers.
+
+Analysis: "If the AI provider fails, how does the Sentinel stay online?"
+
+The Resilience Test Lab:
+
+Documenting "Chaos Engineering" on your MacBook: Intentionally disabling a security service to test the Automated Recovery logic of your Python scripts.
+
+The "Architect" Persona:
+
+Shifting the focus from "Fixing things when they break" to "Engineering systems that cannot be broken."
+
+Output: A high-level Business Continuity Plan (BCP) for a remote-first cybersecurity office.
+
+🛡️ The "Operator" KPI Dashboard
+To make these PBs truly unique, we will include a KPI (Key Performance Indicator) section in your GitHub README:
+
+Mean Time to Detect (MTTD): < 5 Minutes (via automated telemetry).
+
+Compliance Accuracy: 100% (via DORA/NIS2 automated templates).
+
+Attribution Fidelity: High (via Corelight/Zeek Diamond Model mapping).
+
+[DORA Article 28 • Third‑Party Risk • Chaos Engineering • BCP Architecture]
+I. Mission Objective
+To demonstrate mastery of the Digital Operational Resilience Act (DORA) — specifically Article 28, which governs Critical ICT Third‑Party Providers for EU financial and critical‑sector entities.
+This playbook reframes you not as an analyst, but as a Resilience Architect capable of ensuring continuity even when core providers fail.
+
+Your guiding question becomes:
+
+“If the AI provider fails, how does the Sentinel stay online?”
+
+This is the essence of operational sovereignty.
+
+II. Article 28 Audit Protocol — The Sentinel’s Third‑Party Interrogation Framework
+Article 28 requires financial and critical‑sector organizations to prove that their third‑party ICT providers are resilient, transparent, and recoverable.
+
+Your audit protocol becomes a technical interrogation of provider reliability.
+
+Core Audit Dimensions:
+Operational Continuity:  
+Can the provider maintain service during outages, regional failures, or upstream disruptions?
+
+Data Portability:  
+Can you extract your data instantly if the provider becomes unavailable?
+
+Exit Strategy:  
+Is there a documented, testable off‑boarding plan?
+
+Dependency Mapping:  
+What other providers does your provider depend on?
+
+AI‑Specific Controls:  
+How does the provider ensure model integrity, availability, and rollback capability?
+
+This is not a compliance checklist — it’s a stress test of the provider’s survival instincts.
+
+III. The Resilience Test Lab — Chaos Engineering for the Modern Analyst
+You transform your MacBook Air into a miniature DORA Resilience Lab.
+
+Chaos Engineering Scenario:
+You intentionally disable a local security service (non-destructive, safe, controlled) to test whether your Python-based Automated Recovery Logic responds correctly.
+
+What you document:
+Trigger event
+
+Detection mechanism
+
+Automated response
+
+Recovery time
+
+Post‑incident validation
+
+This becomes your personal Operational Resilience Report, mirroring what DORA expects from financial institutions.
+
+Portfolio Narrative Line:
+“I conducted controlled chaos experiments on my local environment to validate automated recovery logic aligned with DORA Article 28.”
+
+This positions you as someone who tests resilience, not assumes it.
+
+IV. The “Architect” Persona — Engineering Systems That Cannot Be Broken
+This playbook shifts your identity from operator to architect.
+
+Operator Mindset:
+“Fix things when they break.”
+
+Architect Mindset:
+“Engineer systems that cannot be broken.”
+
+Architect Principles:
+Redundancy by Design — no single point of failure
+
+Provider‑agnostic workflows — avoid vendor lock‑in
+
+Self‑healing automation — scripts that detect and correct anomalies
+
+Predictive continuity — anticipate failure modes before they occur
+
+Zero‑trust dependencies — every provider must prove reliability
+
+This persona is what EU regulators expect from modern resilience leaders.
+
+V. Business Continuity Plan (BCP) — Remote‑First Cybersecurity Office
+You produce a high‑level BCP tailored for a remote‑first SOC / Threat Intelligence team.
+
+BCP Core Components:
+Communication Continuity:  
+Backup channels (Signal, Teams, email failover).
+
+Identity Continuity:  
+Offline MFA codes, emergency access accounts.
+
+Data Continuity:  
+Encrypted local snapshots + cloud redundancy.
+
+Operational Continuity:  
+Predefined fallback workflows for detection, triage, and reporting.
+
+Provider Failure Playbook:  
+Steps to migrate away from a failing AI or cloud provider.
+
+This becomes a portfolio artifact demonstrating your ability to design continuity at scale.
