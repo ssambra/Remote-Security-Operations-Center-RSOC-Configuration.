@@ -1,0 +1,252 @@
+Master Playbook 1: Global Cyber Defense & Rapid Response
+[Focus: NIS2 Compliance & Global Reporting Protocols]
+The Objective: To demonstrate 100% operational readiness for the European NIS2 directive, specifically focusing on the "Early Warning" mandate.
+
+The 24-Hour "Flash Report" Template:
+
+Status: CRITICAL | Incident ID: SENTINEL-2026-ALPHA
+
+Telemetry Source: Automated detection via sentinel_hunter.py on macOS M-Silicon.
+
+Impact Assessment: Initial triage of cross-border data flows and potential exfiltration of sensitive EU PII.
+
+The "Compliance Timer" Logic:
+
+Script: compliance_timer.py
+
+Function: A countdown ledger that triggers automated alerts at the T-minus 4-hour mark of the NIS2 24-hour deadline. This ensures that no administrative "fog of war" results in a regulatory fine.
+
+Tactical Artifact:
+
+"The Sentinel Early Warning System": A detailed workflow showing how raw kernel telemetry is converted into a legally defensible incident report within 60 minutes of detection.
+MASTER PLAYBOOK 1: GLOBAL CYBER DEFENSE & RAPID RESPONSE
+Operational Doctrine for NIS2 Early Warning & Cross‑Border Incident Reporting
+Author: Melissa Wozney — Identity Auditor, Threat Sentinel, SOC Automation Specialist
+Version: 2026.1
+Classification: INTERNAL — EU‑Aligned Cyber Defense Framework
+
+1. Mission Objective
+To demonstrate full operational readiness for the European NIS2 Directive, specifically the Early Warning requirement mandating that organizations notify authorities within 24 hours of detecting a significant cybersecurity incident.
+
+This playbook ensures:
+
+No missed deadlines
+
+No regulatory exposure
+
+No “fog of war” during crisis
+
+Automated escalation and reporting
+
+Legally defensible documentation
+
+2. 24‑Hour Flash Report Template (NIS2 Early Warning)
+Status: CRITICAL
+Incident ID: SENTINEL-2026-ALPHA  
+Detection Timestamp (UTC): 2026‑04‑21 02:13:45
+Compliance Deadline: +24 hours (NIS2 Early Warning)
+
+2.1 Telemetry Source
+Automated detection via: sentinel_hunter.py  
+Platform: macOS M‑Silicon
+Detection Vector: Kernel‑level telemetry + behavioral anomaly scoring
+
+Triggered Rule:
+
+“Cross‑border data flow anomaly exceeding baseline thresholds.”
+
+2.2 Impact Assessment
+Preliminary Findings:
+
+Suspicious outbound traffic to a non‑EU endpoint
+
+Possible exfiltration of EU PII (GDPR‑relevant)
+
+Activity originated from a privileged identity
+
+Behavior consistent with credential compromise or session hijacking
+
+Risk Level: HIGH
+Regulatory Exposure: NIS2, GDPR, eIDAS2 (identity integrity)
+
+3. The Compliance Timer Logic (Automation Layer)
+File: compliance_timer.py
+Purpose:
+To enforce the NIS2 24‑hour reporting window with machine‑enforced countdown logic.
+
+Core Functions:
+3.1 Countdown Ledger
+Tracks:
+
+T+0 (Detection)
+
+T+4 (Internal escalation deadline)
+
+T+12 (Draft report deadline)
+
+T+20 (Legal review deadline)
+
+T+24 (Mandatory NIS2 Early Warning submission)
+
+3.2 Automated Alerts
+At T‑4 hours, the script triggers:
+
+Email alerts
+
+Slack/Teams alerts
+
+On‑call pager escalation
+
+“Red Banner” compliance warning
+
+3.3 Example Code Snippet
+python
+import datetime
+import time
+
+DEADLINE_HOURS = 24
+
+def start_timer(detection_time):
+    deadline = detection_time + datetime.timedelta(hours=DEADLINE_HOURS)
+    while True:
+        remaining = deadline - datetime.datetime.utcnow()
+        hours_left = remaining.total_seconds() / 3600
+
+        if hours_left <= 4:
+            trigger_alert("T-minus 4 hours to NIS2 deadline!")
+
+        if hours_left <= 0:
+            trigger_alert("NIS2 deadline reached — report must be submitted NOW.")
+            break
+
+        time.sleep(300)  # check every 5 minutes
+
+def trigger_alert(message):
+    print(f"[COMPLIANCE ALERT] {message}")
+4. Tactical Artifact: The Sentinel Early Warning System
+This is the end‑to‑end workflow showing how raw telemetry becomes a legally defensible incident report within 60 minutes.
+
+4.1 Sentinel Early Warning System — 60‑Minute Workflow
+Phase 1 — Detection (Minute 0–5)
+Kernel telemetry flags anomalous outbound traffic
+
+sentinel_hunter.py correlates:
+
+Identity
+
+Device
+
+Geo‑location
+
+Data classification
+
+Event is assigned Incident ID: SENTINEL-2026-ALPHA
+
+Phase 2 — Automated Triage (Minute 5–15)
+log_parser.py extracts structured fields
+
+ioc_extractor.py identifies:
+
+IPs
+
+Domains
+
+Hashes
+
+Risk score generated (0–100)
+
+If score > 70 → auto‑escalation to CRITICAL
+
+Phase 3 — Identity Verification (Minute 15–25)
+Identity Auditor module checks:
+
+MFA logs
+
+Session tokens
+
+Impossible travel
+
+Privilege escalation
+
+Flags any identity anomalies
+
+Phase 4 — Legal & Compliance Prep (Minute 25–40)
+Compliance Timer starts
+
+NIS2 Early Warning template auto‑populated
+
+GDPR impact assessment triggered
+
+Cross‑border data flow analysis initiated
+
+Phase 5 — Draft Report Generation (Minute 40–55)
+System generates:
+
+Executive summary
+
+Timeline
+
+Indicators of compromise
+
+Impact assessment
+
+Containment actions
+
+Analyst reviews and signs off
+
+Phase 6 — Submission Ready (Minute 55–60)
+Report exported to NIS2‑compliant format
+
+Legal review (if required)
+
+Ready for submission to national CSIRT authority
+
+5. Visual Workflow (Described for GitHub Screenshots)
+Screenshot 1 — “Sentinel Detection Console”
+Shows:
+
+Red alert banner
+
+Incident ID
+
+Source IP
+
+Data classification: “EU PII — HIGH SENSITIVITY”
+
+Screenshot 2 — “Compliance Timer Dashboard”
+Shows:
+
+Countdown clock
+
+T‑4 hour warning
+
+Escalation chain
+
+Screenshot 3 — “Early Warning Report Generator”
+Shows:
+
+Auto‑filled fields
+
+Timeline
+
+IOCs
+
+Impact summary
+
+Screenshot 4 — “Identity Auditor Panel”
+Shows:
+
+User session anomalies
+
+MFA failures
+
+Geo‑location mismatch
+
+6. Lessons Learned
+Automation eliminates human error during crisis.
+
+Compliance timers prevent regulatory violations.
+
+Identity telemetry is essential for cross‑border incident analysis.
+
+A 60‑minute reporting pipeline is achievable with the right tooling.
